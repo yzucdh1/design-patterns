@@ -13,9 +13,15 @@ public class Main {
         Flyweight a2 = factory.getFlyweight("A");
 
         System.out.println(a1 == a2);
+        a1.operation("A1");
+        a2.operation("A2");
+
+        System.out.println("=================================");
 
         UnsharedFlyweight u1 = new UnsharedFlyweight("U");
         UnsharedFlyweight u2 = new UnsharedFlyweight("U");
         System.out.println(u1 == u2);
+        u1.operation("U1");
+        u2.operation("U2");
     }
 }
